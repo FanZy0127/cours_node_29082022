@@ -19,7 +19,7 @@ npm
 Pour installer un package, attention il faut d'abord initialiser votre projet avec un npm init :
 
 ```bash
-npm install [non_du_module]
+npm install [nom_du_module]
 ```
 ## Configuration d'un nouveau projet
 
