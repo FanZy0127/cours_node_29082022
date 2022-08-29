@@ -16,7 +16,7 @@ Node ne suit pas le format ES6 pour la gestion de ses modules, mais suit le **fo
 
 Pour connaitre la liste des modules natifs Node.js, il faut se rendre sur sa page de documentation, attention à la version de Node.js que vous utilisez, les modules d'une version à l'autre change.
 
-[modules](https://nodejs.org/dist/latest-v14.x/docs/api/)
+[modules](https://nodejs.org/dist/latest-v16.x/docs/api/)
 
 ## Debug
 
