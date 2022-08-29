@@ -108,7 +108,7 @@ On peut également arrêter le processus lui-même dans le script JS :
 
 ```js
 process.stdin.on('data', (chunk) => {
-    processus.exit(0); // arrêt du processus la valeur 0 est une convetion
+    processus.exit(0); // arrêt du processus la valeur 0 est une convention
 });
 ```
 
