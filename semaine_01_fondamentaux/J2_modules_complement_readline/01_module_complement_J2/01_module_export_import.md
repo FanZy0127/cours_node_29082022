@@ -81,7 +81,7 @@ Dans un fichier app.js définissez la variable d'environnement suivante :
 process.env.NODE_ENV= 'production';
 ```
 
-Vous allez maintenant utiliser un module tier : dotenv il vous permettra de définir vos variables d'environnement dans un fichier à part .env. Ce fichier sera placer à la racine de votre projet.
+Vous allez maintenant utiliser un module tier : dotenv il vous permettra de définir vos variables d'environnement dans un fichier à part .env. Ce fichier sera placé à la racine de votre projet.
 
 ## 02 Exercice d'application
 
@@ -93,7 +93,7 @@ Vous allez maintenant utiliser un module tier : dotenv il vous permettra de déf
 
 ```js
 
-if(procecc.env.APP_EN){
+if(process.env.NODE_ENV){
     console.log("Je suis en production");
 }else{
     console.log("Je suis en développement");
