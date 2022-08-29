@@ -93,7 +93,7 @@ Vous allez maintenant utiliser un module tier : dotenv il vous permettra de déf
 
 ```js
 
-if(procecc.env.APP_EN){
+if(process.env.NODE_ENV){
     console.log("Je suis en production");
 }else{
     console.log("Je suis en développement");
