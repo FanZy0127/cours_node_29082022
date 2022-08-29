@@ -82,7 +82,7 @@ rl.on('line', (line) =>{
 ```
 ## 01 Exercice rechercher un étudiant
 
-L'utilisateur doit proposer dans le terminal un nom d'étudiant. Dès que l'utilisateur à trouver un nom dans la liste on arrête le processus d'écoute.
+L'utilisateur doit proposer dans le terminal un nom d'étudiant. Dès que l'utilisateur a trouvé un nom dans la liste on arrête le processus d'écoute.
 
 La recherche sera insensible à la casse et aux espaces.
 
