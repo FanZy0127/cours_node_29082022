@@ -1,23 +1,35 @@
-// logique métier
-function shuflleUsers( users ){
-    let html = '<ul>';
+const capitalize = (string) => string[0].toUpperCase() + string.substring(1).toLowerCase();
 
-    // le sort mélange les éléments par référence ...
-    // effectivement c'est pas simple mais une fois mélangés
-    // les éléments sont mélangés dans le tableau initial
-    // c'est ce que l'on appelle par référence
-    // regarder d'ailleurs l'exemple dans la doc
-    // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-    users.sort( (a, b) => Math.random() - 0.5) ;
+module.exports = {
+  shuffle: (array) => array.sort(() => 0.5 - Math.random()),
+  htmlContent: (array) => {
+    let content = "";
 
-    for(const user of users){
-        html += `<li>${user}</li>`;
+    for (const { name, address, notes } of array) {
+      let nominator = 0;
+      for (const note of notes) nominator += note;
+
+      const average = (nominator / notes.length).toFixed(2);
+
+      let mention = null;
+
+      if (average >= 16) mention = "Very well";
+      else if (average >= 14) mention = "Well";
+      else if (average >= 12) mention = "Quite well";
+      else if (average >= 10) mention = "Fair";
+      else mention = "Nothing";
+
+      content += `
+        <tr>
+          <td>${capitalize(name)}</td>
+          <td>${capitalize(address)}</td>
+          <td>${notes}</td>
+          <td>${average}</td>
+          <td>${mention}</td>
+        </tr>
+      `;
     }
 
-    html += '</ul>';
-
-    return html;
-}
-
-// on export le nom de la fonction directement accessible dans le code par la suite
-module.exports = shuflleUsers ;
+    return content;
+  },
+};
