@@ -1,0 +1,28 @@
+doctype html
+html(lang="fr")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= titlePage
+
+  body
+    header
+      include ./menu.pug
+
+    main
+      case titlePage
+        when "Home"
+          include ./block/home.pug
+        when "About"
+          include ./block/about.pug
+        when "References"
+         include ./block/references.pug
+        when "Contact"
+          include ./block/contact.pug
+
+    include ./footer.pug
+
+    - if(titlePage === "Home")
+      script.
+        (() => document.getElementById('generate-email').textContent = atob("amVhbi5kdXBvbnRAZ21haWwuY29t"))();

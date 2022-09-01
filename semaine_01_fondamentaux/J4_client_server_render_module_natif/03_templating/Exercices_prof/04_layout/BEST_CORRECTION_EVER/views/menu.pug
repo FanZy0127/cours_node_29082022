@@ -1,0 +1,7 @@
+mixin menuLink(url, text, className = "")
+  li(class=className): a(href=url)= text
+
+nav
+  ul
+   - for(const {path, title, isActive} of menu)
+    +menuLink(path, title, isActive ? "nav-active" : "")

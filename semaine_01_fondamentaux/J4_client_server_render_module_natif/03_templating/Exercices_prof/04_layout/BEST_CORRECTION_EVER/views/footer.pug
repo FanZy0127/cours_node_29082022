@@ -1,0 +1,8 @@
+mixin footerLink(url, text)
+  li: a(href=url)= text
+
+footer
+  ul
+    +footerLink("#", "Mentions légales")
+    +footerLink("#", "CGU")
+    +footerLink("#", "Réclamations")
